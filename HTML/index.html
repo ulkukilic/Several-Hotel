@@ -4,31 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Several Hotel - Welcome </title>
+    <link rel="stylesheet" href="/CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
      <link rel="icon" href="/Img/logo.svg" type="image/x-icon">
+
     
 </head>
 <body>
     
     <header>
-        <nav>
-            <div>
+        <nav class="header-nav">
+            <div class="logo">
                  <img src="/Img/logo.svg" alt="Hotel Logo">        
             </div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
+            <button
+                class="menu-toggle"
+                aria-expanded="false"
+                aria-label="Toggle navigation menu">
+                <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+                </button>
+
+            <ul class="nav-list">
+                <li><a href="index.html" aria-current="page">Home</a></li>
                 <li><a href="aboutUs.html">About Us</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="amenties.html">Amenities</a></li>
+                 <li><a href="booking.html">Booking</a></li>
                 <li><a href="room.html">Rooms</a></li>
             </ul>
         </nav>
     </header>
+    
 
     <main>
 
         <section class="hero">
-            <img src="/Img/hero-home.avif" alt="Hotel Image" style="width:100%; height:auto;">
-            <article>
+            <img class="hero-img" src="/Img/hero-home.avif" alt="Hotel Image" style="width:100%; height:auto;">
+            <article class="hero-content">
                 <h1>Welcome to Out Hotel</h1>
                 <p>Experience luxury and comfort like never before. Our hotel offers the best amenities and services to make your stay unforgettable.</p>
                 <p>Book your stay with us today!</p>

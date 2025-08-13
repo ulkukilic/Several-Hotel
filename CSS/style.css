@@ -22,6 +22,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body{
@@ -173,6 +174,7 @@ main{
     box-shadow: var(--shadow);
     padding: var(--spacing);
 }
+
 .amenities-extra {
 display: flex;
 flex-wrap: wrap;
@@ -198,11 +200,143 @@ border-radius: 0.5rem;
   transform: translateY(-3px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+/* Room Page */
 
+.rooms {
+    margin-bottom: var(--spacing);
+}
+
+.room-cards{
+    display: flex;
+    gap:var(--spacing);
+    flex-wrap: wrap; 
+    justify-content: center; 
+    margin-bottom: var(--spacing);
+}
+
+.room-card {
+    background: #fff;
+    min-width: 280px;
+    max-width: 350px;
+    padding: 1rem;
+    flex: 1 1 300px; /* ayni boyutta olsun */
+    box-shadow: var(--shadow);
+    border-radius: var(--card-radius);
+    transition: box-shadow var(--transition), transform var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    
+}
+
+.room-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: var(--card-radius);
+    margin-bottom: 1rem;
+}
+
+.room-card::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 5px;
+    background: var(--accent-color);
+   transform: scaleX(0);
+    transition: transform 0.3s ease;
+    border-radius: 0 0 var(--card-radius) var(--card-radius);
+}
+
+.room-card:hover::after {
+    transform: scaleX(1);  /* hoverda alt cizgi goster */
+}
+
+.room-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.room-card ul {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.room-card ul li {
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.room-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f1ecec;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border-radius: var(--card-radius);
+    border-spacing: 0;
+    margin-top: 1rem;
+}
+
+.room-table th {
+    background-color: var(--primary-color);
+    color: var(--link-text-color);
+    padding: 1rem;
+    text-align: left;
+    font-weight: 700;
+}
+
+.room-table caption {
+   font-weight: 700;
+   font-size:1.2rem;
+   color: var(--primary-color);
+    margin-bottom: 1rem;
+
+}
+
+.room-table th ,.room-table td {
+
+    padding:  1rem;
+    text-align: left;
+    border-bottom:  1px solid #ddd;
+}
+
+.room-table tr:hover {
+    background-color: var(--accent-color);
+    color: var(--link-text-color);
+    
+}
+.room-table tr:last-child td {
+    border-bottom: none; /* son satirda alt cizgi yok */
+}
+
+
+.room-table tr:nth-child(even) {
+    background-color: #d4cbcb; /* cift satirlara arka plan rengi */
+}
+footer{
+    background-color: var(--primary-color);
+    color: var(--link-text-color);
+    padding: 1rem 0;
+    margin-top:var(--spacing);
+    box-shadow: var(--shadow);
+
+    text-align: center;
+    position: relative; /* icindeki elemanlarin konumlandirilmasi icin */
+    bottom: 0; /* en alta yapistir */
+    width: 100%;
+}
 
 .menu-toggle {
     display: none; /* mobil icin gizle */
     cursor: pointer;
 }
+
+
 
 

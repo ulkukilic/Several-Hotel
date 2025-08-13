@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Several Hotel - Booking</title>
+     <link rel="icon" href="/Img/logo.svg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutUs.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="room.html">Rooms</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="booking">
+            <h1>Book Your Stay</h1>
+            <form>
+
+                <div class="form-row">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="surname">Surname:</label>
+                    <input type="text" id="surname" name="surname" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="checkin">Check-in Date:</label>
+                    <input type="date" id="checkin" name="checkin" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="checkout">Check-out Date:</label>
+                    <input type="date" id="checkout" name="checkout" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="adults">Adults</label>
+                    <input type="number" id="adults" name="adults" min="1" max="10" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="children">Children</label>
+                    <input type="number" id="children" name="children" min="0" max="10">    
+                </div>
+
+                <div class="form-row">
+                    <label for="room-type">Room Type:</label>
+                    <select id="room-type" name="room-type" required>
+                        <option value="deluxe">Deluxe Room</option>
+                        <option value="suit">Executive</option>
+                        <option value="family">Family Room</option> 
+                        <option value="standard">Standard Room</option>
+                    </select>
+                </div>                
+
+                <div class="form-row">
+                    <label for="notes">Special Requests:</label>
+                    <textarea id="notes" name="notes" rows="4" placeholder="Any special requests or notes"></textarea>
+                </div>
+
+                <div class="form-row">
+                    <label for="terms">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        I agree to the <a href="#">terms and conditions</a>
+                </div>
+                
+                <div class="form-row">
+                    <button type="submit" class="btn">Submit Booking</button>   
+                </div>
+                
+            </form>
+        </section>
+
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Several Hotel. All rights reserved.</p>
+    </footer>
+     <script src="/JS/javascript.js"></script>
+</body>
+</html>

@@ -626,9 +626,93 @@ footer{
 
 .menu-toggle {
     display: none; /* mobil icin gizle */
+     background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    z-index: 10;
     cursor: pointer;
 }
 
+
+@media (max-width: 768px) {
+    .header-nav {
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        align-items: center;
+        justify-content: center;
+        background: var(--primary-color);
+        gap: 2rem;
+        z-index: 5;
+        transition: trasform 0.3s ease;
+    }
+
+    .nav-list.active {
+    transform: translateX(0);
+    }
+
+    .nav-list a{
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    .amenities-extra {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+
+
+@media (max-width: 480px) {
+    .logo img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .nav-list a {
+        font-size: 1rem;
+    }
+
+    .nav-list a {
+    font-size: var(--font-size-sm);
+
+    }
+
+    .hero-img {
+        height: 20vh;
+        
+    }
+
+    .hero-content h1 {
+        font-size: var(--font-size-lg);
+        padding: var(--spacing-md);
+    }
+
+}
 
 
 

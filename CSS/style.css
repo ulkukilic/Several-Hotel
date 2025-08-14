@@ -30,6 +30,7 @@ body{
     color: var(--text-color);
     line-height: 1.5;
 }
+
 header {
     background-color: var(--primary-color);
     position: sticky; /* sayfa kaysada ustte yapisik kalir*/
@@ -200,6 +201,14 @@ border-radius: 0.5rem;
   transform: translateY(-3px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+h1{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color:rgb(38, 57, 108);
+    text-align: center;
+}
+
 /* Room Page */
 
 .rooms {
@@ -319,6 +328,61 @@ border-radius: 0.5rem;
 .room-table tr:nth-child(even) {
     background-color: #d4cbcb; /* cift satirlara arka plan rengi */
 }
+
+/* Amenties */
+.amenities-list{
+    display: flex;
+    gap:var(--spacing);
+    flex-wrap: wrap; 
+    justify-content: center; 
+    margin-bottom: var(--spacing);
+}
+.amenities-card {
+    background: #fff;
+    min-width: 280px;
+    max-width: 350px;
+    padding: 1rem;
+    flex: 1 1 300px; /* ayni boyutta olsun */
+    box-shadow: var(--shadow);
+    border-radius: var(--card-radius);
+    transition: box-shadow var(--transition), transform var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.amenities-card:hover::after{
+    transform: scaleX(1);  /* hoverda alt cizgi goster */
+}
+
+.amenities-card::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 5px;
+    background: var(--accent-color);
+   transform: scaleX(0);
+    transition: transform 0.3s ease;
+    border-radius: 0 0 var(--card-radius) var(--card-radius);
+     transform-origin: left; 
+}
+
+.amenities-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: var(--card-radius);
+    margin-bottom: 1rem;
+}
+.amenities-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
 footer{
     background-color: var(--primary-color);
     color: var(--link-text-color);

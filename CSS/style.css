@@ -383,6 +383,234 @@ h1{
     color: var(--primary-color);
 }
 
+
+/* Booking */
+.booking-form {
+    box-shadow: var(--shadow);
+    padding: var(--spacing);
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.form-row input,
+.form-row select,
+.form-row textarea {
+    padding: 0.5rem 1rem;
+    border: 1px solid #d0d0d0;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    box-shadow: var(--shadow);
+    outline: none;
+    transition: border-color var(--transition);
+}
+
+.form-row label {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.form-row input {
+    padding: 0.5rem 1rem;
+    border: 1px solid #d0d0d0;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    box-shadow: var(--shadow);
+    outline: none;
+}
+
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px var(--accent-color);
+}
+
+.privacy-policy {
+    display: flex;
+    gap: 0.5rem;
+}
+
+
+/* About page  */ 
+.about {
+    background: #f9f9f9;
+    border-radius: var(--card-radius);
+    box-shadow: var(--shadow);
+    padding: var(--spacing);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing);
+    align-items: flex-start;
+}
+
+.about article {
+    display: flex;
+    flex: 2 1 350px;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.about article img {
+    width: 100%;
+    max-width: 350px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--card-radius);
+    margin-bottom: 1rem;
+}
+
+.about article ul {
+list-style: disc;
+    padding-left: 1.5rem;
+    color: var(--text-color);
+    margin-top: 1rem;
+
+}
+.about article ul li {
+    margin-bottom: 0.3rem 0 ;
+}
+
+.about article ul li::marker {
+    color: var(--accent-color);
+}
+
+.about-aside {
+    flex: 1 1 300px;
+    padding: 1rem;
+    border-radius: var(--card-radius);
+    box-shadow: var(--shadow);
+    background: var(--bg-color);
+    margin-left: auto;
+}
+.about-aside h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.about-aside ol {
+    padding-left: 1.5rem;
+    color: var(--text-color);
+}
+.about-aside ol li {
+    counter-increment: values-counter;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+.about-aside ol li::before {
+    content:  counter(values-counter);
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    font-weight: bold;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.75rem;
+}
+
+/*Contact page */
+.contact {
+  background-color: #fff;
+  border-radius: var(--card-radius);
+  box-shadow: var(--shadow);
+  padding: var(--spacing);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing);
+  align-items: flex-start;
+}
+.contact article {
+  display: flex;
+  flex: 2 1 350px;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact article img {
+  width: 100%;
+  max-width: 350px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--card-radius);
+  margin-bottom: 1rem;
+}
+
+.contact article ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+}
+
+.contact article ul li {
+  padding: 0.3rem 0;
+}
+
+.contact article ul li::marker {
+  color: var(--accent-color);
+}
+
+.contact-aside {
+  flex: 1 1 200px;
+  background: var(--bg-color);
+  border-radius: var(--card-radius);
+  box-shadow: var(--shadow);
+  padding: 1rem;
+  margin-left: auto;
+}
+
+.social-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.social-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    transition:color var(--transition) , transform var(--transition);
+}
+
+.social-list li a {
+  text-decoration: none;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.social-list img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+
+.social-list li a:hover {
+  color: var(--accent-color);
+  transform: translateX(3px) scale(1.05);
+}
+
+
 footer{
     background-color: var(--primary-color);
     color: var(--link-text-color);

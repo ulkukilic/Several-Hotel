@@ -1,12 +1,16 @@
 {
+  "cleanUrls": true,
   "rewrites": [
     { "source": "/", "destination": "/HTML/index.html" },
-    { "source": "/", "destination": "/HTML/aboutUs.html" },
-    { "source": "/", "destination": "/HTML/contact.html" },
-    { "source": "/", "destination": "/HTML/room.html" },
-    { "source": "/", "destination": "/HTML/booking.html" },
-     { "source": "/", "destination": "/HTML/amenties.html" }
-    
-  
+    { "source": "/aboutUs", "destination": "/HTML/aboutUs.html" },
+    { "source": "/amenties", "destination": "/HTML/amenties.html" },
+    { "source": "/booking", "destination": "/HTML/booking.html" },
+    { "source": "/contact", "destination": "/HTML/contact.html" },
+    { "source": "/room", "destination": "/HTML/room.html" },
+    { "source": "/aboutUs.html", "destination": "/HTML/aboutUs.html" },
+    { "source": "/amenties.html", "destination": "/HTML/amenties.html" },
+    { "source": "/booking.html", "destination": "/HTML/booking.html" },
+    { "source": "/contact.html", "destination": "/HTML/contact.html" },
+    { "source": "/room.html", "destination": "/HTML/room.html" }
   ]
 }

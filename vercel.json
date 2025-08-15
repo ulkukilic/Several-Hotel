@@ -1,12 +1,15 @@
 {
-
   "rewrites": [
     { "source": "/", "destination": "/HTML/index.html" },
+    { "source": "/index", "destination": "/HTML/index.html" },
+    { "source": "/index.html", "destination": "/HTML/index.html" },
+
     { "source": "/aboutUs", "destination": "/HTML/aboutUs.html" },
     { "source": "/amenties", "destination": "/HTML/amenties.html" },
     { "source": "/booking", "destination": "/HTML/booking.html" },
     { "source": "/contact", "destination": "/HTML/contact.html" },
     { "source": "/room", "destination": "/HTML/room.html" },
+
     { "source": "/aboutUs.html", "destination": "/HTML/aboutUs.html" },
     { "source": "/amenties.html", "destination": "/HTML/amenties.html" },
     { "source": "/booking.html", "destination": "/HTML/booking.html" },
